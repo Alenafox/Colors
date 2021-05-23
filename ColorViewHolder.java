@@ -18,11 +18,11 @@ public class ColorViewHolder extends RecyclerView.ViewHolder {
     }
 
     void bindTo(String color) {
-        Resources res = context.getResources();
-        String packageName = context.getPackageName();
-        int colorId = res.getIdentifier(color, "color", packageName);
-        if (colorId > 0)
-            tv.setBackgroundColor(res.getColor(colorId));
+        Resources resources = context.getResources();
+        String package_name = context.getPackageName();
+        int id = resources.getIdentifier(color, "color", package_name);
+        if (id > 0)
+            tv.setBackgroundColor(resources.getColor(id));
         tv.setText("color name: " + color);
     }
 }
